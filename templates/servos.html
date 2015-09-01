@@ -1,0 +1,41 @@
+<div class="page" ng-controller="ServosCtrl as servosCtrl">
+	<nav class="tab-fixed">
+		<ul class="tab-inner">
+			<li class="active">
+				<a href="#servos">
+					Servos
+				</a>
+			</li>
+			<li>
+				<a href="#livros">
+					Livros
+				</a>
+			</li>
+		</ul>
+	</nav>	
+<ul class="list inset">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li class="list-divider">Servos</li>
+<li ng-repeat="servo in servosCtrl.servosDados" class="list-item-multi-line selectable">
+	<a href="javascript: void(0);" data-ignore="true">
+		<div class="imgServo">
+			<img src="{{servo.imgUrl}}">
+		</div>
+		<h4>{{servo.nome}}</h4>
+		<p><i class="icon-call"></i> {{servo.fone}}</p>
+	</a>
+</li>
+</ul>
+
+<nav class="action-bar fixed-bottom">
+	<ul class="actions flex" data-overflow="false">
+		<li>
+			<a href="#/servos/add" class="action" title="Compose" data-ignore="true"><i class="icon-add-person"></i></a>
+		</li>
+	</ul>
+</nav>
+
+</div>	
